@@ -135,7 +135,7 @@ $can_delete = PageAccessManager::is_allowed('data_pribadi/delete');
                                         if($can_edit){
                                         ?>
                                         <router-link class="btn btn-sm btn-info has-tooltip" v-if="editbutton"  :to="'/data_pribadi/edit/'  + data.id">
-                                        <i class="fa fa-edit"></i> 
+                                        <i class="fa fa-edit"></i> Edit
                                         </router-link>
                                         <?php 
                                         }
@@ -144,13 +144,13 @@ $can_delete = PageAccessManager::is_allowed('data_pribadi/delete');
                                         if($can_delete){
                                         ?>
                                         <button @click="deleteRecord" class="btn btn-sm btn-danger" v-if="deletebutton" :to="'/data_pribadi/delete/' + data.id">
-                                        <i class="fa fa-times"></i> </button>
+                                        <i class="fa fa-times"></i> Hapus</button>
                                         <?php 
                                         }
                                         ?>
                                     </span>
                                     <button @click="exportRecord" class="btn btn-sm btn-primary" v-if="exportbutton">
-                                        <i class="fa fa-save"></i> 
+                                        <i class="fa fa-save"></i> Cetak
                                     </button>
                                 </div>
                             </div>
@@ -184,6 +184,10 @@ $can_delete = PageAccessManager::is_allowed('data_pribadi/delete');
 			apipath: {
 				type : String,
 				default : 'data_pribadi/view',
+			},
+			exportbutton: {
+				type: Boolean,
+				default: false,
 			},
 		},
 		data: function() {
