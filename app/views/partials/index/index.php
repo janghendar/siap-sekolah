@@ -7,7 +7,7 @@
                                 <div class="">
                                     <div class="fadeIn animated mb-4">
                                         <div class="text-capitalize">
-                                            <h2 class="text-capitalize">Selamat Datang di <?php echo SITE_NAME ?>
+                                            <h2 class="text-capitalize">SELAMATA DATANG DI <?php echo SITE_NAME ?>
                                             </h2>
                                         </div>
                                     </div>
@@ -15,7 +15,7 @@
                             </div>
                             <div  class="col-sm-4 comp-grid" :class="setGridSize">
                                 <div  class="bg-light card card-body animated fadeIn">
-                                    <h4><i class="fa fa-key"></i>Login Pengguna</h4>
+                                    <h4><i class="fa fa-key"></i> User Login</h4>
                                     <hr />
                                     <form name="loginForm" action="<?php print_link('index/login'); ?>" @submit.prevent="login()" method="post">
                                         <b-alert class="animated shake" variant="danger" :show="showError" @dismissed="showError=false" dismissible>
@@ -37,7 +37,7 @@
                                             <div class="col-6">
                                                 <label class="">
                                                     <input value="true" type="checkbox" name="rememberme" />
-                                                    Ingat Saya
+                                                    Remember Me
                                                 </label>
                                             </div>
                                             <div class="col-6">

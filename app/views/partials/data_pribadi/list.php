@@ -86,9 +86,9 @@ $can_delete = PageAccessManager::is_allowed('data_pribadi/delete');
                                                         <?php 
                                                         if($can_view){
                                                         ?>
-                                                        <button v-if="viewbutton" class="btn btn-sm btn-outline-primary" title="View Record" @click="showPageModal({page:'data_pribadiView',  id:data.id})">
-                                                            <i class="fa fa-eye"></i> Tampil
-                                                        </button>
+                                                        <router-link v-if="viewbutton" class="btn btn-sm btn-outline-primary" title="View Record" :to="'/data_pribadi/view/' + data.id">
+                                                        <i class="fa fa-eye"></i> Tampil
+                                                        </router-link>
                                                         <?php 
                                                         }
                                                         ?>
