@@ -185,10 +185,6 @@ $can_delete = PageAccessManager::is_allowed('data_pribadi/delete');
 				type : String,
 				default : 'data_pribadi/view',
 			},
-			exportbutton: {
-				type: Boolean,
-				default: false,
-			},
 		},
 		data: function() {
 			return {
